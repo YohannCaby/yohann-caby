@@ -7,15 +7,30 @@ on:
     branches: [ $default-branch ]
   workflow_dispatch:
 env:
-  FTP_HOST: ${{ secrets.FTP_HOST }}
+  FTP_HOST : ${{ secrets.FTP_HOST }}
+  FTP_USER : ${{ secrets.FTP_USER }}
+  FTP_PWD : ${{ secrets.FTP_PWD }}
+
 jobs:
   build:
     runs-on : ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [ 23.x ]
+
     steps:
-      - name: Environement
-        run: | 
-          echo ${FTP_HOST}
-          echo ${{ secrets.FTP_USER }}
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Build & Deploy
+        run: |
+          npm install
+          npm run generate
+          npm run deploy
 
     
