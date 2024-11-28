@@ -6,7 +6,8 @@ on:
   pull_request:
     branches: [ $default-branch ]
   workflow_dispatch:
-
+env:
+  FTP_HOST: ${{ secrets.FTP_HOST }}
 jobs:
   build:
     runs-on : ubuntu-latest
@@ -14,7 +15,7 @@ jobs:
     steps:
       - name: Environement
         run: | 
-          echo ${{ secrets.FTP_HOST }}
+          echo $FTP_HOST
           echo ${{ secrets.FTP_USER }}
 
     
