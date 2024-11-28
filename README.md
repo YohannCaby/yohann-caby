@@ -85,3 +85,11 @@ yarn deploy
 # bun
 bun run deploy
 ```
+Pour réaliser un déploiement depuis un poste de dev il est 
+nécessaire de définir les variables d'environnement suivantes:
+
+```bash
+export FTP_USER=<ftp-user>
+export FTP_PWD=<ftp-password>
+export FTP_HOST=<ftp-host>
+```
