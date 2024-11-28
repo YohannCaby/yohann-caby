@@ -6,12 +6,6 @@ on:
   pull_request:
     branches: [ $default-branch ]
   workflow_dispatch:
-    
-
-env:
-  FTP_HOST : ${{ secrets.FTP_HOST }}
-  FTP_USER : ${{ secrets.FTP_USER }}
-  FTP_PWD : ${{ secrets.FTP_PWD }}
 
 jobs:
   build:
@@ -22,4 +16,8 @@ jobs:
         run: | 
           echo $FTP_HOST  
           echo $FTP_USER
+        env:
+          FTP_HOST : ${{ secrets.FTP_HOST }}
+          FTP_USER : ${{ secrets.FTP_USER }}
+          FTP_PWD : ${{ secrets.FTP_PWD }}
     
