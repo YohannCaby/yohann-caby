@@ -14,10 +14,7 @@ jobs:
     steps:
       - name: Environement
         run: | 
-          echo $FTP_HOST  
-          echo $FTP_USER
-        env:
-          FTP_HOST : ${{ secrets.FTP_HOST }}
-          FTP_USER : ${{ secrets.FTP_USER }}
-          FTP_PWD : ${{ secrets.FTP_PWD }}
+          echo ${{ secrets.FTP_HOST }}
+          echo ${{ secrets.FTP_USER }}
+
     
