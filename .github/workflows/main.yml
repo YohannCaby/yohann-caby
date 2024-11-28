@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Environement
         run: | 
-          echo $FTP_HOST
+          echo ${FTP_HOST}
           echo ${{ secrets.FTP_USER }}
 
     
