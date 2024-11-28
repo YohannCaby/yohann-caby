@@ -20,6 +20,6 @@ jobs:
     steps:
       - name: Environement
         run: | 
-        echo $FTP_HOST  
-        echo $FTP_USER
+          echo $FTP_HOST  
+          echo $FTP_USER
     
