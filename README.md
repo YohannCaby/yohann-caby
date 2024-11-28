@@ -70,3 +70,18 @@ yarn preview
 bun run preview
 ```
 
+Déploiement de la production sur le serveur
+
+```bash
+# npm
+npm run deploy
+
+# pnpm
+pnpm run deploy
+
+# yarn
+yarn deploy
+
+# bun
+bun run deploy
+```
