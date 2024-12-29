@@ -8,7 +8,7 @@ export const useCVStore = defineStore('cvStore', {
              icon: '/img/pagesjaunes.svg',
              iconAlt: 'Pages Jaunes',
              color: 'yellow',
-             title: 'Developer web full stack',
+             title: 'Lead Developer fullstack',
              estab: 'Pages Jaunes',
              year: 2023,
              tag: ['xp'],
