@@ -8,7 +8,7 @@
       <v-main class="d-flex justify-center align-center">
 
         <div class="d-flex flex-column" style="max-width: 800px; width: 100%;">
-          <Presentation />
+          <Presentation v-if="tab==='experiences'"/>
           <v-tabs
               align-tabs="center"
               v-model="tab">
@@ -18,6 +18,9 @@
             <v-tab value="competences">
               Compétences
             </v-tab>
+            <v-tab value="contact">
+              Contact
+            </v-tab>
           </v-tabs>
           <v-tabs-window v-model="tab">
             <v-tabs-window-item value="experiences">
@@ -26,6 +29,9 @@
             </v-tabs-window-item>
             <v-tabs-window-item value="competences">
                 <Skills />
+            </v-tabs-window-item>
+            <v-tabs-window-item value="contact">
+              <Contact />
             </v-tabs-window-item>
           </v-tabs-window>
         </div>
