@@ -35,6 +35,11 @@ export default defineComponent({
   >
     06.72.82.00.35
   </v-list-item>
+  <v-list-item
+    prepend-icon="mdi-download"
+  >
+    <a href="/CV%20Yohann%20CABY.pdf" target="_blank">CV Yohann CABY.pdf</a>
+  </v-list-item>
 </v-list>
 </template>
 
